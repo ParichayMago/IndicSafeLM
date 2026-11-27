@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Large or derived data: keep manifests and README files tracked.
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Model outputs, logs, generated responses, and reports.
+artifacts/*
+!artifacts/.gitkeep
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.bin
+*.log
+
+# Local OS/editor files
+.DS_Store
+.idea/
+.vscode/
+
+
+# Generated datasets (rebuild with scripts/build_datasets.py). They contain
+# mild abusive example text used as dispreferred responses, so they are not
+# committed (NFR-09); data/dataset_manifest.json keeps the counts.
+data/instructions/
+data/preferences/
+data/ppo/
+data/eval/

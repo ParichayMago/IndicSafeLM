@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "project": "IndicSafeLM",
+  "languages": ["hi", "bn", "ta"],
+  "language_names": {
+    "hi": "Hindi",
+    "bn": "Bengali",
+    "ta": "Tamil"
+  },
+  "model": {
+    "architecture": "decoder_only_transformer",
+    "target_parameters": 42000000,
+    "num_layers": 8,
+    "hidden_size": 512,
+    "num_attention_heads": 8,
+    "feed_forward_size": 2048,
+    "context_length": 512,
+    "vocab_size": 32000,
+    "position_encoding": "rope",
+    "activation": "gelu",
+    "pretraining_dropout": 0.1,
+    "weight_tying": true
+  },
+  "data": {
+    "target_training_tokens_per_language": 100000000,
+    "split_ratios": {"train": 0.98, "validation": 0.01, "test": 0.01},
+    "deduplicate_before_split": true,
+    "tokenizer_sample_balanced": true,
+    "preference_pairs_target": {"minimum": 3000, "maximum": 6000},
+    "phase1_acquisition_mode": "cloud_only",
+    "phase1_inventory": "data/manifests/inventory.json",
+    "phase2_pipeline_config": "configs/data_pipeline.json",
+    "phase2_target": "deterministic_clean_deduplicate_split"
+  },
+  "paths": {
+    "source_manifest": "data/manifests/sources.jsonl",
+    "artifact_root": "artifacts",
+    "raw_data": "data/raw",
+    "interim_data": "data/interim",
+    "processed_data": "data/processed"
+  },
+  "reproducibility": {
+    "default_seed": 1729,
+    "stage_seeds": {
+      "data": 1729,
+      "tokenizer": 1730,
+      "pretrain": 1731,
+      "sft": 1732,
+      "reward": 1733,
+      "ppo": 1734,
+      "evaluation": 1735
+    },
+    "set_python_hash_seed": true,
+    "deterministic_evaluation": true
+  },
+  "tracking": {
+    "backend": "tensorboard",
+    "run_id_format": "YYYYMMDD-HHMMSS_stage_language_seed_gitsha",
+    "log_root": "artifacts/runs"
+  }
+}

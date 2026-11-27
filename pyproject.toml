@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools==75.3.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indicsafelm"
+version = "0.1.0"
+description = "Academic multilingual Indic language-model safety-alignment prototype"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "torch==2.15.0",
+    "numpy==2.5.5",
+    "pandas==3.1.1",
+    "pyarrow==26.0.1",
+    "sentencepiece==0.2.3",
+    "PyYAML==6.0.4",
+    "tqdm==4.70.1",
+    "gradio==6.32.0",
+    "matplotlib==3.11.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.2.0",
+    "ruff==0.17.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+

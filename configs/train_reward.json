@@ -1,0 +1,24 @@
+{
+  "train_pairs": "data/preferences/pairs_train.jsonl",
+  "validation_pairs": "data/preferences/pairs_validation.jsonl",
+  "tokenizer_dir": "artifacts/tokenizer/v1",
+  "sft_bundle": "artifacts/checkpoints/sft",
+  "export_dir": "artifacts/checkpoints/reward",
+  "output_dir": "artifacts/runs",
+  "seed": 1733,
+  "epochs": 1,
+  "pairs_per_batch": 16,
+  "precision": "bf16",
+  "device": "auto",
+  "optim": {
+    "lr": 3e-05,
+    "min_lr_ratio": 0.1,
+    "warmup_steps": 20,
+    "total_steps": 2000,
+    "weight_decay": 0.0,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "eps": 1e-08,
+    "grad_clip": 1.0
+  }
+}

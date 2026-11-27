@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "pipeline_version": "phase2-v1.2-local",
+  "normalization": {
+    "unicode_form": "NFC",
+    "remove_bom": true,
+    "preserve_joiners": true,
+    "collapse_whitespace": true
+  },
+  "quality": {
+    "min_characters": 40,
+    "max_characters": 200000,
+    "max_repeated_character_run": 20,
+    "max_repeated_line_fraction": 0.5,
+    "min_target_script_fraction": 0.55,
+    "min_code_mixed_target_script_fraction": 0.25,
+    "max_url_like_fraction": 0.4,
+    "boilerplate_patterns": [
+      "cookie policy",
+      "privacy policy",
+      "all rights reserved",
+      "enable javascript"
+    ]
+  },
+  "privacy": {
+    "reject_email": true,
+    "reject_phone": true,
+    "reject_ipv4": true,
+    "reject_credit_card": true,
+    "redact_review_previews": true
+  },
+  "deduplication": {
+    "exact_hash": "sha256_normalized_text",
+    "near_duplicate": true,
+    "shingle_size": 5,
+    "minhash_permutations": 32,
+    "minhash_bands": 8,
+    "jaccard_threshold": 0.85,
+    "verification": "signature_estimate"
+  },
+  "split": {
+    "seed": 1729,
+    "ratios": {
+      "train": 0.98,
+      "validation": 0.01,
+      "test": 0.01
+    },
+    "stratify_by": [
+      "language"
+    ],
+    "ensure_nonempty_for_small_fixture": false
+  },
+  "token_estimation": {
+    "method": "non_whitespace_characters_divided_by",
+    "characters_per_token": 3.0
+  },
+  "review": {
+    "samples_per_reason_and_language": 2
+  },
+  "source_policy": {
+    "selected_source_ids": [
+      "wikipedia-20231101-hi",
+      "wikipedia-20231101-bn",
+      "wikipedia-20231101-ta"
+    ],
+    "allow_fixture_records": false
+  }
+}

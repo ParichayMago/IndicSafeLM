@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "config": {
+    "seed": 2027,
+    "sft_families_per_concept": 50,
+    "pref_families_per_concept": 60,
+    "heldout_families_per_concept": 30,
+    "tell_about_train_titles": 120,
+    "tell_about_heldout_titles": 30,
+    "sft_harmful_compliance_rate": 0.5,
+    "sft_sensitive_refusal_rate": 0.2,
+    "sft_unclear_per_language": 30
+  },
+  "files": {
+    "instructions/sft.jsonl": {
+      "rows": 2553,
+      "by_language": {
+        "hi": 856,
+        "bn": 851,
+        "ta": 846
+      },
+      "by_category": {
+        "direct_insult": 392,
+        "harassment": 413,
+        "escalation_request": 131,
+        "hate_or_toxicity": 91,
+        "profanity": 130,
+        "benign_sensitive_context": 583,
+        "ordinary_helpful": 795,
+        "unclear_request": 18
+      }
+    },
+    "preferences/pairs_train.jsonl": {
+      "rows": 4140,
+      "by_language": {
+        "hi": 1380,
+        "bn": 1380,
+        "ta": 1380
+      },
+      "by_category": {
+        "direct_insult": 540,
+        "harassment": 540,
+        "escalation_request": 180,
+        "hate_or_toxicity": 180,
+        "profanity": 180,
+        "benign_sensitive_context": 1440,
+        "ordinary_helpful": 1080
+      }
+    },
+    "preferences/pairs_validation.jsonl": {
+      "rows": 1135,
+      "by_language": {
+        "hi": 379,
+        "bn": 384,
+        "ta": 372
+      },
+      "by_category": {
+        "direct_insult": 156,
+        "harassment": 114,
+        "escalation_request": 54,
+        "hate_or_toxicity": 18,
+        "profanity": 66,
+        "benign_sensitive_context": 216,
+        "ordinary_helpful": 511
+      }
+    },
+    "ppo/prompts_train.jsonl": {
+      "rows": 1876,
+      "by_language": {
+        "hi": 622,
+        "bn": 627,
+        "ta": 627
+      },
+      "by_category": {
+        "direct_insult": 270,
+        "harassment": 274,
+        "escalation_request": 68,
+        "hate_or_toxicity": 18,
+        "profanity": 67,
+        "benign_sensitive_context": 359,
+        "ordinary_helpful": 820
+      }
+    },
+    "eval/dev_prompts.jsonl": {
+      "rows": 340,
+      "by_language": {
+        "hi": 107,
+        "bn": 118,
+        "ta": 115
+      },
+      "by_category": {
+        "direct_insult": 24,
+        "harassment": 36,
+        "escalation_request": 9,
+        "hate_or_toxicity": 9,
+        "profanity": 3,
+        "benign_sensitive_context": 48,
+        "ordinary_helpful": 211
+      }
+    },
+    "eval/test_prompts.jsonl": {
+      "rows": 809,
+      "by_language": {
+        "hi": 275,
+        "bn": 257,
+        "ta": 277
+      },
+      "by_category": {
+        "direct_insult": 96,
+        "harassment": 90,
+        "escalation_request": 18,
+        "profanity": 33,
+        "benign_sensitive_context": 135,
+        "ordinary_helpful": 437
+      }
+    },
+    "eval/demo_cases.jsonl": {
+      "rows": 12,
+      "by_language": {
+        "hi": 4,
+        "bn": 4,
+        "ta": 4
+      },
+      "by_category": {
+        "direct_insult": 3,
+        "benign_sensitive_context": 6,
+        "ordinary_helpful": 3
+      }
+    }
+  },
+  "leakage_checks": {
+    "heldout_prompt_overlap_with_training": 0,
+    "heldout_family_overlap_with_training": 0,
+    "demo_prompt_overlap": 0,
+    "families_span_one_split": true
+  },
+  "sft_response_behavior": {
+    "harmful_compliance": 514,
+    "safe_redirection": 643,
+    "direct_helpful_answer": 1178,
+    "false_refusal": 200,
+    "clarification": 18
+  },
+  "pref_rejected_reason": {
+    "harmful_compliance": 1450,
+    "wrong_language": 629,
+    "false_refusal": 1285,
+    "irrelevant": 776
+  }
+}

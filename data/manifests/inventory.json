@@ -1,0 +1,307 @@
+{
+  "cloud_gate": {
+    "current_status": "sample_inspection_and_checksums_pending_cloud_only_gate",
+    "required_before_acquisition": [
+      "pin_dataset_revision_or_dated_dump",
+      "inspect_remote_sample_for_encoding_boilerplate_pii_unsafe_content_and_domain_balance",
+      "record_source_checksum_and_access_date",
+      "approve_license_and_source_rights"
+    ]
+  },
+  "execution_policy": {
+    "checksums_pending_cloud_acquisition": true,
+    "corpus_payload_access": false,
+    "network_access": false,
+    "raw_data_downloaded_locally": false
+  },
+  "inventory_type": "phase1_metadata_only",
+  "language_summary": {
+    "bn": {
+      "all_candidate_published_token_estimate": 2686000000,
+      "known_byte_estimate": 0,
+      "known_document_estimate": 3830000,
+      "language_name": "Bengali",
+      "record_count": 5,
+      "records_without_byte_estimate": 3,
+      "records_without_document_estimate": 4,
+      "records_without_token_estimate": 3,
+      "sample_inspection_statuses": {
+        "not_run_cloud_gate_required": 4,
+        "pending_cloud_only_inspection": 1
+      },
+      "selected_published_token_estimate": 1850000000,
+      "selected_record_count": 1,
+      "selected_source_ids": [
+        "hplt-v2-bn"
+      ],
+      "target_training_tokens": 100000000
+    },
+    "hi": {
+      "all_candidate_published_token_estimate": 4290000000,
+      "known_byte_estimate": 0,
+      "known_document_estimate": 4950000,
+      "language_name": "Hindi",
+      "record_count": 5,
+      "records_without_byte_estimate": 3,
+      "records_without_document_estimate": 4,
+      "records_without_token_estimate": 3,
+      "sample_inspection_statuses": {
+        "not_run_cloud_gate_required": 4,
+        "pending_cloud_only_inspection": 1
+      },
+      "selected_published_token_estimate": 2430000000,
+      "selected_record_count": 1,
+      "selected_source_ids": [
+        "hplt-v2-hi"
+      ],
+      "target_training_tokens": 100000000
+    },
+    "ta": {
+      "all_candidate_published_token_estimate": 2522000000,
+      "known_byte_estimate": 0,
+      "known_document_estimate": 4410000,
+      "language_name": "Tamil",
+      "record_count": 5,
+      "records_without_byte_estimate": 3,
+      "records_without_document_estimate": 4,
+      "records_without_token_estimate": 3,
+      "sample_inspection_statuses": {
+        "not_run_cloud_gate_required": 4,
+        "pending_cloud_only_inspection": 1
+      },
+      "selected_published_token_estimate": 1940000000,
+      "selected_record_count": 1,
+      "selected_source_ids": [
+        "hplt-v2-ta"
+      ],
+      "target_training_tokens": 100000000
+    }
+  },
+  "languages": [
+    "hi",
+    "bn",
+    "ta"
+  ],
+  "manifest_access_dates": [
+    "2026-09-30"
+  ],
+  "record_count": 15,
+  "schema_version": 1,
+  "selected_source_ids": [
+    "hplt-v2-hi",
+    "hplt-v2-bn",
+    "hplt-v2-ta"
+  ],
+  "source_overview": [
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": 218000000000,
+      "estimated_documents": null,
+      "estimated_tokens": 2430000000,
+      "estimated_volume_scope": "all_languages_for_bytes_and_documents",
+      "language": "hi",
+      "license": "CC0-1.0 for the HPLT package; inspect upstream source-rights notice",
+      "license_status": "conditional_primary_candidate",
+      "representative_sample_status": "pending_cloud_only_inspection",
+      "selection_status": "selected_for_cloud_pilot",
+      "source_id": "hplt-v2-hi",
+      "source_release": "indic-hplt-v2"
+    },
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": 218000000000,
+      "estimated_documents": null,
+      "estimated_tokens": 1850000000,
+      "estimated_volume_scope": "all_languages_for_bytes_and_documents",
+      "language": "bn",
+      "license": "CC0-1.0 for the HPLT package; inspect upstream source-rights notice",
+      "license_status": "conditional_primary_candidate",
+      "representative_sample_status": "pending_cloud_only_inspection",
+      "selection_status": "selected_for_cloud_pilot",
+      "source_id": "hplt-v2-bn",
+      "source_release": "indic-hplt-v2"
+    },
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": 218000000000,
+      "estimated_documents": null,
+      "estimated_tokens": 1940000000,
+      "estimated_volume_scope": "all_languages_for_bytes_and_documents",
+      "language": "ta",
+      "license": "CC0-1.0 for the HPLT package; inspect upstream source-rights notice",
+      "license_status": "conditional_primary_candidate",
+      "representative_sample_status": "pending_cloud_only_inspection",
+      "selection_status": "selected_for_cloud_pilot",
+      "source_id": "hplt-v2-ta",
+      "source_release": "indic-hplt-v2"
+    },
+    {
+      "access_probe_status": "object_store_403_unauthenticated_probe_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": 4950000,
+      "estimated_tokens": 1860000000,
+      "estimated_volume_scope": "published_articles_and_tokens",
+      "language": "hi",
+      "license": "CC BY-NC-SA 4.0",
+      "license_status": "excluded_default_due_license_and_access",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "excluded_default_due_license_and_access",
+      "source_id": "indiccorp-v1-hi",
+      "source_release": "v1-indiccorp"
+    },
+    {
+      "access_probe_status": "object_store_403_unauthenticated_probe_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": 3830000,
+      "estimated_tokens": 836000000,
+      "estimated_volume_scope": "published_articles_and_tokens",
+      "language": "bn",
+      "license": "CC BY-NC-SA 4.0",
+      "license_status": "excluded_default_due_license_and_access",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "excluded_default_due_license_and_access",
+      "source_id": "indiccorp-v1-bn",
+      "source_release": "v1-indiccorp"
+    },
+    {
+      "access_probe_status": "object_store_403_unauthenticated_probe_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": 4410000,
+      "estimated_tokens": 582000000,
+      "estimated_volume_scope": "published_articles_and_tokens",
+      "language": "ta",
+      "license": "CC BY-NC-SA 4.0",
+      "license_status": "excluded_default_due_license_and_access",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "excluded_default_due_license_and_access",
+      "source_id": "indiccorp-v1-ta",
+      "source_release": "v1-indiccorp"
+    },
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": 275000000000,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "all_languages_for_rows_and_bytes",
+      "language": "hi",
+      "license": "CC0-1.0 per dataset card",
+      "license_status": "hold_revision_and_source_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_revision_and_source_review",
+      "source_id": "indiccorp-v2-hi",
+      "source_release": "IndicCorpV2"
+    },
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": 275000000000,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "all_languages_for_rows_and_bytes",
+      "language": "bn",
+      "license": "CC0-1.0 per dataset card",
+      "license_status": "hold_revision_and_source_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_revision_and_source_review",
+      "source_id": "indiccorp-v2-bn",
+      "source_release": "IndicCorpV2"
+    },
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": 275000000000,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "all_languages_for_rows_and_bytes",
+      "language": "ta",
+      "license": "CC0-1.0 per dataset card",
+      "license_status": "hold_revision_and_source_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_revision_and_source_review",
+      "source_id": "indiccorp-v2-ta",
+      "source_release": "IndicCorpV2"
+    },
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "all_languages_for_tokens",
+      "language": "hi",
+      "license": "CC BY 4.0 per dataset card",
+      "license_status": "hold_attribution_and_source_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_attribution_and_source_review",
+      "source_id": "sangraha-verified-hin",
+      "source_release": "sangraha-current-card"
+    },
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "all_languages_for_tokens",
+      "language": "bn",
+      "license": "CC BY 4.0 per dataset card",
+      "license_status": "hold_attribution_and_source_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_attribution_and_source_review",
+      "source_id": "sangraha-verified-ben",
+      "source_release": "sangraha-current-card"
+    },
+    {
+      "access_probe_status": "landing_page_200_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "all_languages_for_tokens",
+      "language": "ta",
+      "license": "CC BY 4.0 per dataset card",
+      "license_status": "hold_attribution_and_source_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_attribution_and_source_review",
+      "source_id": "sangraha-verified-tam",
+      "source_release": "sangraha-current-card"
+    },
+    {
+      "access_probe_status": "directory_200_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "not_published_in_manifest",
+      "language": "hi",
+      "license": "Wikimedia project terms; Wikipedia content commonly carries CC BY-SA/GFDL obligations",
+      "license_status": "hold_dated_release_and_terms_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_dated_release_and_terms_review",
+      "source_id": "wikimedia-hi",
+      "source_release": "latest_dynamic"
+    },
+    {
+      "access_probe_status": "directory_200_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "not_published_in_manifest",
+      "language": "bn",
+      "license": "Wikimedia project terms; Wikipedia content commonly carries CC BY-SA/GFDL obligations",
+      "license_status": "hold_dated_release_and_terms_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_dated_release_and_terms_review",
+      "source_id": "wikimedia-bn",
+      "source_release": "latest_dynamic"
+    },
+    {
+      "access_probe_status": "directory_200_2026-09-30",
+      "estimated_bytes": null,
+      "estimated_documents": null,
+      "estimated_tokens": null,
+      "estimated_volume_scope": "not_published_in_manifest",
+      "language": "ta",
+      "license": "Wikimedia project terms; Wikipedia content commonly carries CC BY-SA/GFDL obligations",
+      "license_status": "hold_dated_release_and_terms_review",
+      "representative_sample_status": "not_run_cloud_gate_required",
+      "selection_status": "hold_dated_release_and_terms_review",
+      "source_id": "wikimedia-ta",
+      "source_release": "latest_dynamic"
+    }
+  ]
+}

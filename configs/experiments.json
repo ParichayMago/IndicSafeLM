@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "matrix": [
+    {
+      "id": "smoke",
+      "stage": "smoke",
+      "parent": null,
+      "purpose": "Validate configuration, metadata, checkpoint plumbing, and reporting without model-scale data."
+    },
+    {
+      "id": "base-pretrain",
+      "stage": "pretrain",
+      "parent": null,
+      "purpose": "Train the decoder-only Transformer with causal next-token prediction.",
+      "checkpoint_role": "base"
+    },
+    {
+      "id": "sft",
+      "stage": "sft",
+      "parent": "base-pretrain",
+      "purpose": "Teach multilingual prompt-response behavior with supervised instruction tuning.",
+      "checkpoint_role": "sft",
+      "frozen_reference": true
+    },
+    {
+      "id": "reward-model",
+      "stage": "reward",
+      "parent": "sft",
+      "purpose": "Learn pairwise preferences for safe, useful responses.",
+      "checkpoint_role": "reward-model"
+    },
+    {
+      "id": "ppo",
+      "stage": "ppo",
+      "parent": "sft",
+      "reward_model": "reward-model",
+      "purpose": "Optimize safety behavior with PPO while constraining drift from SFT.",
+      "checkpoint_role": "ppo",
+      "frozen_reference": true
+    },
+    {
+      "id": "keyword-filter",
+      "stage": "baseline",
+      "parent": "sft",
+      "purpose": "Measure a simple keyword/profanity filter against learned alignment.",
+      "checkpoint_role": "baseline"
+    }
+  ],
+  "required_comparisons": [
+    ["base-pretrain", "sft"],
+    ["sft", "ppo"],
+    ["keyword-filter", "ppo"]
+  ]
+}
+
